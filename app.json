@@ -1,0 +1,35 @@
+{
+	"expo": {
+		"name": "byUwUr Expo Template",
+		"slug": "byuwur-expo-template",
+		"version": "0.1",
+		"orientation": "portrait",
+		"icon": "./assets/logo.png",
+		"userInterfaceStyle": "light",
+		"splash": {
+			"image": "./assets/splash.png",
+			"resizeMode": "contain",
+			"backgroundColor": "#FFF"
+		},
+		"assetBundlePatterns": ["**/*"],
+		"ios": {
+			"supportsTablet": true
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/logo.png",
+				"backgroundColor": "#FFF"
+			},
+			"package": "com.byuwur.expotemplate"
+		},
+		"androidBackgroundPermissions": { "audio": true },
+		"web": {
+			"favicon": "./assets/logo.png"
+		},
+		"extra": {
+			"eas": {
+				"projectId": ""
+			}
+		}
+	}
+}

@@ -1,1 +1,2 @@
-# expo-app-template
+# byuwur-expo-template
+Expo template.

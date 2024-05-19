@@ -38,6 +38,7 @@ export const Routes = () => {
 					headerTitleAlign: "center",
 					headerShown: true,
 					headerTransparent: false,
+					headerShadowVisible: false,
 					headerBackVisible: false,
 					headerTitle: () => (
 						<Image

@@ -3,6 +3,7 @@ import { Input } from "react-native-elements";
 import { tw } from "../libs";
 import { ByIcon } from "./ByIcon";
 import { BLACK, LIGHT } from "./colors";
+import { INPUT_MARGIN_TOP, INPUT_PADDING } from "./values";
 
 export const ByInput = forwardRef(({ placeholder, label = "", twStyles = "", textColor = BLACK, isPassword = false, value = "", onDelete = () => {}, ...props }, ref) => {
 	const [showPassword, setShowPassword] = useState(false);
@@ -14,12 +15,12 @@ export const ByInput = forwardRef(({ placeholder, label = "", twStyles = "", tex
 	return (
 		<Input
 			ref={ref}
-			secureTextEntry={showPassword}
+			secureTextEntry={!showPassword}
 			value={value}
 			accessibilityLabel={label}
 			accessibilityHint={label}
 			style={tw`text-[${textColor}]`}
-			inputContainerStyle={tw`border-0 border-[${LIGHT}33] bg-[${LIGHT}33] rounded-xl mt-1 px-3 ${twStyles}`}
+			inputContainerStyle={tw`border-0 border-[${LIGHT}33] bg-[${LIGHT}33] rounded-xl mt-${INPUT_MARGIN_TOP} pl-${INPUT_PADDING} pr-${INPUT_PADDING * 3} ${twStyles}`}
 			label={label}
 			labelStyle={tw`text-[${textColor}] font-normal m-0`}
 			placeholder={placeholder ?? label}

@@ -37,6 +37,7 @@ export const Routes = () => {
 					headerTintColor: "white",
 					headerTitleAlign: "center",
 					headerShown: true,
+					headerTransparent: false,
 					headerBackVisible: false,
 					headerTitle: () => (
 						<Image
@@ -58,7 +59,7 @@ export const Routes = () => {
 						/>
 					)
 				}}>
-				<Stack.Screen name="Splash" component={Splash} options={{}} />
+				<Stack.Screen name="Splash" component={Splash} options={{ headerLeft: null, headerTitle: null, headerRight: null, headerShown: false }} />
 				<Stack.Screen name="Login" component={Login} options={{}} />
 			</Stack.Navigator>
 		</NavigationContainer>

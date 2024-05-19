@@ -1,11 +1,11 @@
 import React from "react";
 import { Image, Text, TouchableOpacity, View } from "react-native";
 import { tw } from "../libs";
-import { GRAY, WHITE } from "./colors";
 import { ByIcon } from "./ByIcon";
+import { GRAY, TRANSPARENT, WHITE } from "./colors";
 
-export const ByButton = ({ twStyles, background = WHITE, disabled = false, action, text, textSize = "lg", textColor, imageSource, imageStyle, iconRight = false, iconName, iconColor = WHITE, iconBackground = WHITE, iconAction }) => {
-	const ThisButtonIcon = () => <ByIcon action={iconAction ?? action} background={iconBackground} color={iconColor} name={iconName} />;
+export const ByButton = ({ twStyles, background = WHITE, disabled = false, action, text, textSize = "lg", textColor, imageSource, imageStyle, iconRight = false, iconName, iconColor, iconBackground = TRANSPARENT, iconAction }) => {
+	const ThisButtonIcon = () => <ByIcon action={iconAction ?? action} background={iconBackground} color={iconColor ?? textColor} name={iconName} />;
 	return (
 		<View style={tw`border-2 border-[#0001] w-full rounded-xl my-1 p-2 bg-[${background}] ${twStyles}`}>
 			<TouchableOpacity style={tw`flex flex-row`} onPress={action} disabled={disabled}>
